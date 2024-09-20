@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    margin: 0.4rem;
+}
+
+.button {
+    margin-bottom: 0.4rem;
+}
+.lifts {
+    width: 80px;
+    height: 100px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+#liftDetails{
+    display: flex;
+    flex-direction: column;
+    border-radius: 5%;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+}
+
+#malfunctionLifts {
+    display: flex;
+    border-radius: 5%;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+}
+
+#disabledLifts{
+    margin: 0.4rem;
+    padding: 0.4rem;
+    width: 4rem;
+}
+#btnDisable{
+    margin: 0.4rem;
+    padding: 0.4rem;
+    background-color: rgb(255, 213, 213);
+    border: 0.1rem solid red;
+    color: #ff0000;
+    border-radius: 5%;
+}
+.lifts p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.floor {
+    height: 100px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(240, 237, 237);
+    padding: 5px;
+    border-bottom: 2px grey solid;
+}
+
+.liftMotion{
+    transition-duration: 5s;
+}
+
+.lifts .gate {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    border: 1px solid #111;
+    background-color: rgb(186, 186, 186);
+}
+
+.gateLeft {
+    left: 0;
+}
+
+.gateRight {
+    right: 0;
+}
+
+.animateLiftsDoorsOnFloorStop  {
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-name: doorSimulation;
+}
+
+@keyframes doorSimulation {
+    from {
+        width: 50%;
+    }
+    50% {
+        width: 0%;
+    }
+    to {
+        width: 50%;
+    }
+}
